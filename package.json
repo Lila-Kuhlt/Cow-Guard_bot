@@ -1,0 +1,22 @@
+{
+  "name": "@elias.schaut/discord-bot-template_slim",
+  "version": "1.0.0-beta.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "pm": "pm2 start src/index.js --name my-bot",
+    "pm-restart": "pm2 reload my-bot",
+    "pm-stop": "pm2 delete my-bot"
+  },
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "pm2": "^5.1.2"
+  },
+  "keywords": [
+    "discord-bot-template"
+  ],
+  "author": "Elias Schaut",
+  "license": "MIT"
+}
