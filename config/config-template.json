@@ -1,4 +1,20 @@
 {
   "prefix": "<YOUR_PREFIX>",
-  "token": "<YOUR_TOKEN>"
+  "token": "<YOUR_TOKEN>",
+
+  "api_user": "<USERNAME_ONE-TIME-SECRET>",
+  "api_key": "<APIKEY_ONE-TIME-SECRET>",
+
+  "pw": {
+    "<PW_NAME_1>": {
+      "user": "<USERNAME>",
+      "password": "<PASSWORD>",
+      "role_ids_with_access": [ "<ROLE-ID_1>", "<ROLE-ID_2>", "<ROLE-ID_3>" ]
+    },
+    "<PW_NAME_2>": {
+      "user": "<USERNAME>",
+      "password": "<PASSWORD>",
+      "role_ids_with_access": [ "<ROLE-ID_1>" ]
+    }
+  }
 }
