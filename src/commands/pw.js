@@ -18,7 +18,7 @@ module.exports = {
         msg.channel.send({ embeds: [this.generate_embed_success(msg, title, description)] })
     },
     async print_specific_key(msg, key) {
-        if (!await this.check_access(msg, key)) return await msg.reply("You are not authorised to access this password!")
+        if (!this.check_access(msg, key)) return await msg.reply("You are not authorised to access this password!")
 
         const pw = msg.client.config.pw[key]
         const passphrase = generator.generate({ length: 16, numbers: true, symbols: true })
@@ -27,13 +27,11 @@ module.exports = {
         const title = "Password: " + key
         const description = `User: ${pw.user}\nPassword: ${secret_share}\n
             Enter this passphase: \`${passphrase}\`\nLink is only usable once and exceeds in five minutes!`
-        msg.channel.send({ embeds: [this.generate_embed_success(msg, title, description)] })
+        await msg.client.output.send_embed_to_dm(msg, this.generate_embed_success(msg, title, description))
     },
-    async check_access(msg, key) {
+    check_access(msg, key) {
         const role_ids_with_access = msg.client.config.pw[key].role_ids_with_access
-        console.log(msg.member.roles.cache.some(role => role_ids_with_access.includes(role.id)))
-
-        return false
+        return msg.member.roles.cache.some(role => role_ids_with_access.includes(role.id))
     },
     generate_embed_success(msg, title, description) {
         return new MessageEmbed()
