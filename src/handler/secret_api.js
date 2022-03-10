@@ -23,7 +23,7 @@ async function make_request(client, url, secret, passphrase) {
     params.append("passphrase", passphrase)
     params.append("ttl", secret_api.ttl)
 
-    const req = await fetch(secret_api.path, {
+    const req = await fetch(url, {
         method: 'POST',
         body: params,
         headers: {
