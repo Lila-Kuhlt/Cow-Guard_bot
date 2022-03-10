@@ -60,7 +60,7 @@ async function try_to_execute(msg, command, args) {
 
     } catch (e) {
         console.error(e)
-        msg.channel.reply("There was an error trying to execute that command!")
+        msg.reply("There was an error trying to execute that command!")
     }
 }
 // ----------------------------------

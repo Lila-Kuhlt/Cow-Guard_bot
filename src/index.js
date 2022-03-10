@@ -24,6 +24,8 @@ client.commands = new Discord.Collection()
 client.config = require('../config/config.json')
 client.helper = require('./util/cmd_helper')
 client.command_event = require("./handler/command_create")
+client.secret_api = require("./handler/secret_api")
+client.output = require("./util/output")
 
 // dynamically retrieve all command files
 async function load_commands(client) {

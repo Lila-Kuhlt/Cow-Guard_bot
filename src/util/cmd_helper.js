@@ -27,7 +27,7 @@ function commands_to_string(msg) {
     let out = ""
 
     for (const command of msg.client.commands.keys()) {
-        out += `${command}\n`
+        out += `**${command}**\n`
     }
 
     return out
