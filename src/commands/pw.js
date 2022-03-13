@@ -21,7 +21,7 @@ module.exports = {
         if (!this.check_access(msg, key)) return await msg.reply("You are not authorised to access this password!")
 
         const pw = msg.client.config.pw[key]
-        const passphrase = generator.generate({ length: 16, numbers: true, symbols: true })
+        const passphrase = this.generate_passphrase()
         const secret_share = await msg.client.secret_api.create_secret(msg.client, pw.password, passphrase)
 
         const title = "Password: " + key
@@ -38,5 +38,8 @@ module.exports = {
             .setTitle(title)
             .setDescription(description)
             .setColor("DARK_PURPLE")
+    },
+    generate_passphrase() {
+        return generator.generate({ length: 16, numbers: true, symbols: true, exclude: '`' })
     }
 }
