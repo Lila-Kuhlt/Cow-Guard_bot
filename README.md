@@ -4,7 +4,7 @@ A discord bot for getting passwords with https://onetimesecret.com/ if having a 
 ## Features
 This bot can run the following commands:
 * ```help```: Shows all commands or more information about a specific command
-* ```pw```: Without args: List of all passwords; With args: Get password when you have a whitelisted discord role! ()
+* ```pw```: Without args: List of all passwords; With args: Get password when you have a whitelisted discord role!
 
 ## Preparations
 * You need [node.js](https://nodejs.org/en/) (v16.14.0 or higher) installed.
