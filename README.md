@@ -21,11 +21,13 @@ This bot can run the following commands:
 
 ## Config-File
 ### Config-Table
-| Key    | Description                                                         | Value-Type      | Must be set |
-|--------|---------------------------------------------------------------------|-----------------|-------------|
-| prefix | The bot's prefix                                                    | String          | yes         |
-| token  | The bot's token                                                     | String          | yes         |
-| pw     | The saved passwords. Fill with [Password-Objects](#Password-Object) | Array of Object | yes         |
+| Key      | Description                                                         | Value-Type      | Must be set |
+|----------|---------------------------------------------------------------------|-----------------|-------------|
+| prefix   | The bot's prefix                                                    | String          | yes         |
+| token    | The bot's token                                                     | String          | yes         |
+| api_user | The User-Name (E-Mail) of personal *onetimesecret*-Account          | String          | yes         |
+| api_key  | The API-Key of personal *onetimesecret*-Account                     | String          | yes         |
+| pw       | The saved passwords. Fill with [Password-Objects](#Password-Object) | Array of Object | yes         |
 
 ### Password-Object
 ```json
