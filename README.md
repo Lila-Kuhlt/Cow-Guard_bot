@@ -29,8 +29,8 @@ This bot can run the following commands:
 
 ### Password-Object
 ```json
-"<PW_NAME_1>": {  // the label for the password! It will be accessable via pw command (pw <PW_NAMW>) 
-      "user": "<USERNAME>", // The username to for your application (this will send plain text)
+"<PW_NAME_1>": {  // the label for the password! It will be accessable via pw command (pw <PW_NAME>) 
+      "user": "<USERNAME>", // The username to for your application (this will send via plain text)
       "password": "<PASSWORD>", // The secret password for your application (this will send via onetimesecret)
       "role_ids_with_access": [ "<ROLE-ID_1>", "<ROLE-ID_2>", "<ROLE-ID_3>" ] // only if a member has one of this roles, he/she has access to get this password via pw <PW_NAME>
     }
