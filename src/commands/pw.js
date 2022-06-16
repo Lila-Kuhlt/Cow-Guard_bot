@@ -8,6 +8,7 @@ module.exports = {
     usage: '?[pw_key]',
     async execute(msg, args) {
         if (args.length === 0) return await this.print_all_keys(msg)
+        else if (msg.channel.type === "DM") return msg.reply("You can't use this command in a DM!")
         else if (Object.keys(msg.client.config.pw).includes(args[0])) await this.print_specific_key(msg, args[0])
         else msg.reply("This key does not exist!")
     },
